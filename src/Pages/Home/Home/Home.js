@@ -4,8 +4,8 @@ import Workshops from '../Workshops/Workshops';
 
 const Home = () => {
     return (
-        <div>
-            <h2 className='fw-bolder text-center'>This is home page!!</h2>
+        <div className='my-5'>
+
             <Workshops></Workshops>
             <RecentEvents></RecentEvents>
         </div>

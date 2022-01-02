@@ -5,10 +5,12 @@ import Details from './Pages/Home/Details/Details';
 import Home from './Pages/Home/Home/Home';
 import Notice from './Pages/Notice/Notice';
 import Footer from './Pages/Shared/Footer/Footer';
+import Navigation from './Pages/Shared/Navigation/Navigation';
 
 function App() {
   return (
     <div className="App">
+      <Navigation />
       <Switch>
         <Route exact path='/' >
           <Home />
@@ -19,9 +21,9 @@ function App() {
         <Route path='/notice'>
           <Notice />
         </Route>
-        <Route  path="/details/:detailsId">
-            <Details></Details>
-          </Route>
+        <Route path="/details/:detailsId">
+          <Details></Details>
+        </Route>
         <Route path='*'>
           <NotFound />
         </Route>

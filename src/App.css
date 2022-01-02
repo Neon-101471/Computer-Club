@@ -10,7 +10,13 @@ a{
   font-weight: 600;
   cursor: pointer;
 }
-
+/* nav a */
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(255, 254, 254, 1);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255,255,255,1);
+}
 /* border style */
 .top-dotted-border{
   border-top: 1px dotted #3BAD29;
