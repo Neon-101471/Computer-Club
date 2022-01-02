@@ -1,8 +1,6 @@
 import React from 'react';
 import { Box, Container, Grid } from '@mui/material';
 import Workshop from '../Workshop/Workshop';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faDesktop } from '@fortawesome/free-solid-svg-icons';
 const workshops = [
     {
         name: 'Computer Intro',
