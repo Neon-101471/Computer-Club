@@ -1,6 +1,7 @@
 import React from 'react';
-import RecentEvents from './RecenEvents/RecentEvents';
-import Workshops from './Workshops/Workshops';
+import RecentEvents from '../RecenEvents/RecentEvents';
+import Workshops from '../Workshops/Workshops';
+
 const Home = () => {
     return (
         <div>
