@@ -3,6 +3,7 @@ import './App.css';
 import NotFound from './Pages/404/NotFound';
 import Home from './Pages/Home/Home/Home';
 import Notice from './Pages/Notice/Notice';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

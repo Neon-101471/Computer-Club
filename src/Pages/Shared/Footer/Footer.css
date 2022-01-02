@@ -1,0 +1,41 @@
+.footer-container{
+    padding-bottom: 2px;
+    color: white;
+    background-color: #0C2340;
+}
+
+.contact-contaienr{
+    padding: 0px;
+}
+
+.special-container img{
+    height: 80px;
+    width: 50%;
+    text-align: center;
+}
+
+.special-container p, .contact-container p, .information-container p, .academic-container p, .research-container p {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.special-container, .contact-container, .information-container, .academic-container, .research-container {
+    padding-bottom: 15px;
+}
+.special-container p:hover, .contact-container p:hover, .information-container p:hover, .academic-container p:hover, .research-container p:hover, .copyright-area a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.copyright-area hr{
+    border-top: 1px solid goldenrod;
+    opacity: 0.60;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.copyright-area a{
+    color: white;
+    text-decoration: none;
+}
