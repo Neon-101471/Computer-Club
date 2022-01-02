@@ -19,7 +19,7 @@ const Welcome = () => {
               url="https://youtu.be/7N2jks0AQb4"
             ></ReactPlayer>
           </div>
-          <div className="col-md-7  mt-3">
+          <div className="col-md-7  mt-3 d-flex justify-content-center align-items-center">
           <h5>
             BRAC University Computer Club (BUCC) is the oldest club of BRAC
             university founded by Mr. Annajiat Alim Rasel in 2001. This club

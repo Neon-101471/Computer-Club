@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import NotFound from './Pages/404/NotFound';
+import About from './Pages/About/About';
 import Details from './Pages/Home/Details/Details';
 import Home from './Pages/Home/Home/Home';
 import Notice from './Pages/Notice/Notice';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/details/:detailsId">
           <Details></Details>
         </Route>
+        <Route  path='/about'><About></About></Route>
         <Route path='*'>
           <NotFound />
         </Route>
