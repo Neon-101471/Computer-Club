@@ -14,13 +14,13 @@ const RecentEvents = () => {
       <h2 className=" ">
         RECENT EVENTS <hr />
       </h2>
-     <div classNamed-flex>
-     <div className="row">
-        {events.map((event) => (
-          <RecentEvent key={event.id} event={event}></RecentEvent>
-        ))}
+      <div className='d-flex'>
+        <div className="row">
+          {events.map((event) => (
+            <RecentEvent key={event.id} event={event}></RecentEvent>
+          ))}
+        </div>
       </div>
-     </div>
     </div>
   );
 };
