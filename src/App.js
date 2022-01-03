@@ -6,6 +6,7 @@ import Events from './Pages/Events/Events';
 import Details from './Pages/Home/Details/Details';
 import Home from './Pages/Home/Home/Home';
 import Notice from './Pages/Notice/Notice';
+import Results from './Pages/Results/Results';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path='/events'>
           <Events />
+        </Route>
+        <Route path='/results'>
+          <Results />
         </Route>
         <Route path="/details/:detailsId">
           <Details></Details>
