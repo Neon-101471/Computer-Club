@@ -5,7 +5,7 @@ import NoticeBody from './NoticeBody/NoticeBody';
 const Notice = () => {
     return (
         <div>
-            <Banner />
+            <Banner title={'Notice board'} />
             <NoticeBody />
         </div>
     );

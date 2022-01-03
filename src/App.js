@@ -22,6 +22,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Notice from './Pages/Notice/Notice';
+import Results from './Pages/Results/Results';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 >>>>>>> 99482630ff036ddbf379b30b37ddec59815960f1
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route path="/events">
           <Events />
+        </Route>
+        <Route path='/results'>
+          <Results />
         </Route>
         <Route path="/details/:detailsId">
           <Details></Details>
