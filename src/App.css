@@ -38,3 +38,8 @@ a{
   font-size: 24px;
   font-weight: 700;
 }
+/* bg color */
+.bg-navy{
+  background-color: rgb(12, 35, 64);
+  color: #fff;
+}

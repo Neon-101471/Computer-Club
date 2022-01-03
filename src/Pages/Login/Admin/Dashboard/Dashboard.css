@@ -1,0 +1,8 @@
+.accordion-item,.accordion-button{
+    background-color: rgb(12, 35, 64);
+    color: #fff;
+    border-bottom: 1px groove #fff;
+}
+.bg-navy>a{
+    line-height: 40px;
+}

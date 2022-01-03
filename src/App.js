@@ -15,6 +15,7 @@ import Notice from "./Pages/Notice/Notice";
 import RolesAndRegulation from "./Pages/RolesAndRegulation/RolesAndRegulation";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
+import Dashboard from "./Pages/Login/Admin/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route path="/roles">
             <RolesAndRegulation></RolesAndRegulation>
+          </Route>
+          <Route path='/dashboard'>
+            <Dashboard />
           </Route>
           <Route path='*'>
             <NotFound />
