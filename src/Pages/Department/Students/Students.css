@@ -1,0 +1,8 @@
+.single-student {
+    background: #005AA7;
+    background: linear-gradient(to right, #ddd6f3, #f3b5b2);
+}
+
+.students-container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
