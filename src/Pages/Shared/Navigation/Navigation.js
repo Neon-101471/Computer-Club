@@ -17,9 +17,14 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/events" className='text-light'>Events</Nav.Link>
                         <Nav.Link as={Link} to="/notice" className='text-light'>Notice</Nav.Link>
                         <NavDropdown title="Department" id="basic-nav-dropdown" className='text-light'>
-                            <NavDropdown.Item href="#action/3.2">Teachers</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Students</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Executive Body</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/teachers">Teachers</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/students">Students</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Executive" id="basic-nav-dropdown" className='text-light'>
+                            <NavDropdown.Item as={Link} to="/current-panel">Current Panel</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/2020-panel">2020 Panel</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/2019-panel">2019 Panel</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/2018-panel">2018 Panel</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/login" className='text-light'>Login</Nav.Link>
                     </Nav>
