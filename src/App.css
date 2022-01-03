@@ -10,7 +10,10 @@ a{
   font-weight: 600;
   cursor: pointer;
 }
-/* nav a */
+/* nav */
+.site-logo{
+  width: 60px;
+}
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
   color: rgba(255, 254, 254, 1);
 }
