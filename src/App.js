@@ -1,18 +1,20 @@
 import { Route, Switch } from "react-router-dom";
 import './App.css';
 import AuthProvider from './Contexts/AuthProvider';
-import NotFound from './Pages/404/NotFound';
-import About from './Pages/About/About';
-import Events from './Pages/Events/Events';
-import Details from './Pages/Home/Details/Details';
-import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
-import Notice from './Pages/Notice/Notice';
-import Footer from './Pages/Shared/Footer/Footer';
-import Navigation from './Pages/Shared/Navigation/Navigation';
 import Results from "./Pages/Results/Results";
+import NotFound from "./Pages/404/NotFound";
+import About from "./Pages/About/About";
+import Students from "./Pages/Department/Students/Students";
+import Teachers from "./Pages/Department/Teachers/Teachers";
+import Events from "./Pages/Events/Events";
+import Details from "./Pages/Home/Details/Details";
+import Home from "./Pages/Home/Home/Home";
+import Notice from "./Pages/Notice/Notice";
 import RolesAndRegulation from "./Pages/RolesAndRegulation/RolesAndRegulation";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Navigation from "./Pages/Shared/Navigation/Navigation";
 
 function App() {
   return (
@@ -40,6 +42,12 @@ function App() {
           </Route>
           <Route path='/about'>
             <About></About>
+          </Route>
+          <Route path="/teachers">
+            <Teachers></Teachers>
+          </Route>
+          <Route path="/students">
+            <Students />
           </Route>
           <Route path='/login'>
             <Login></Login>

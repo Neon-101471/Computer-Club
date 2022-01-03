@@ -1,0 +1,17 @@
+.teachers-container {
+    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.teacher-image img {
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single-teacher {
+    background-color: aliceblue;
+    color: blue;
+    border-radius: 8px;
+}
