@@ -1,4 +1,9 @@
 /* global font color */
+
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .color-green{
   color: #3BAD29;
 }

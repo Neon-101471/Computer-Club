@@ -8,7 +8,7 @@ const Welcome = () => {
         <h4>
           WELCOME TO <hr />{" "}
         </h4>
-        <h1>BRAC University Computer Club</h1>
+        <h1>RMSTU University Computer Club</h1>
         <div className="row ">
           <div className="col-md-5 mt-3 p-2">
             <ReactPlayer
@@ -21,7 +21,7 @@ const Welcome = () => {
           </div>
           <div className="col-md-7  mt-3 d-flex justify-content-center align-items-center">
           <h5>
-            BRAC University Computer Club (BUCC) is the oldest club of BRAC
+            RMSTU University Computer Club (BUCC) is the oldest club of RMSTU
             university founded by Mr. Annajiat Alim Rasel in 2001. This club
             consists of a youthful team of passionate and hardworking Tech
             Enthusiast students. They strive to learn more about the advanced
