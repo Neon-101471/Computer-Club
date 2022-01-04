@@ -19,6 +19,7 @@ import Dashboard from "./Pages/Login/Admin/Dashboard/Dashboard";
 import CurrentPanel from "./Pages/Executives/CurrentPanel/CurrentPanel";
 import ResultForm from "./Pages/EventForm/ResultForm/ResultForm";
 import NoticeForm from "./Pages/EventForm/NoticeForm/NoticeForm";
+import NoticeDemo from "./Pages/Notice/NoticeDemo/NoticeDemo";
 
 function App() {
   return (
@@ -73,6 +74,9 @@ function App() {
           </Route>
           <Route path='/dashboard'>
             <Dashboard />
+          </Route>
+          <Route path='/notice-demo'>
+            <NoticeDemo />
           </Route>
           <Route path='*'>
             <NotFound />

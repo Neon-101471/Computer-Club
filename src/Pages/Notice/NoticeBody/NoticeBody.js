@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
+import NoticeDemo from '../NoticeDemo/NoticeDemo';
 import NoticeDetails from '../NoticeDetails/NoticeDetails';
 
 const notices = [
@@ -39,7 +40,7 @@ const NoticeBody = () => {
                 <Col xs={12} md={8} className='ps-5'>
                     <Switch>
                         <Route exact path={path}>
-                            <h2>Notice dashboard</h2>
+                            <NoticeDemo />
                         </Route>
                         {notices?.map(notice => <Route key={Math.random()} path={`${path}/${notice.title}`}>
                             <NoticeDetails notice={notice} />
