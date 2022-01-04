@@ -16,6 +16,9 @@ import RolesAndRegulation from "./Pages/RolesAndRegulation/RolesAndRegulation";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
 import Dashboard from "./Pages/Login/Admin/Dashboard/Dashboard";
+import CurrentPanel from "./Pages/Executives/CurrentPanel/CurrentPanel";
+import ResultForm from "./Pages/EventForm/ResultForm/ResultForm";
+import NoticeForm from "./Pages/EventForm/NoticeForm/NoticeForm";
 
 function App() {
   return (
@@ -50,6 +53,12 @@ function App() {
           <Route path="/students">
             <Students />
           </Route>
+          <Route path="/notice-form">
+            <NoticeForm />
+          </Route>
+          <Route path="/current-panel">
+            <CurrentPanel />
+          </Route>
           <Route path='/login'>
             <Login></Login>
           </Route>
@@ -58,6 +67,9 @@ function App() {
           </Route>
           <Route path="/roles">
             <RolesAndRegulation></RolesAndRegulation>
+          </Route>
+          <Route path='/result-form'>
+            <ResultForm />
           </Route>
           <Route path='/dashboard'>
             <Dashboard />

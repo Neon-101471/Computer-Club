@@ -1,0 +1,36 @@
+.event-container{
+    margin: 0px;
+    min-height: 50vh;
+    background-color: #ece3e3;
+}
+
+.event-form p {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.event-form form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-form form input, textarea {
+    padding: 0px 8px;
+    width: 100%;
+    border: 0px;
+    background-color: rgb(188, 211, 233);
+    border-bottom: 2px solid green;
+    border-radius: 8px;
+    height: 50px !important;
+    margin-bottom: 15px;
+}
+
+#submit-btn{
+    background-color: rgb(173, 156, 134);
+    color: white;
+    font-size: 25px;
+}

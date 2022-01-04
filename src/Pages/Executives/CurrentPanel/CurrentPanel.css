@@ -1,0 +1,32 @@
+.executive-container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.executive-info{
+    background-color: #f8f2f2;
+    box-shadow: 3px 3px 4px lightgray;
+    border-radius: 5px;
+}
+
+.executive-info p{
+    margin: 0px;
+}
+
+.executive-card hr{
+    margin-left: 16px;
+    opacity: 0.5;
+    width: 60%;
+    display: flx;
+    justify-content: center;
+    margin-top: 0px;
+    border-bottom: 2px solid green;
+}
+
+.executive-card:hover{
+    background-color: rgb(246, 242, 242);
+    box-shadow: 4px 4px 3px rgb(226, 220, 220);
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}

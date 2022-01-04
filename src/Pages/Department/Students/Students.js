@@ -74,6 +74,54 @@ const students = [
         student_batch: '1st',
         student_email: 'rasel@gmail.com'
     },
+    {
+        student_id: 211,
+        student_name: "Morshidul Amin Ridwan",
+        student_batch: '1st',
+        student_email: 'ridwan@gmail.com'
+    },
+    {
+        student_id: 212,
+        student_name: "Habibur Rahman Rasel",
+        student_batch: '1st',
+        student_email: 'rasel@gmail.com'
+    },
+    {
+        student_id: 211,
+        student_name: "Morshidul Amin Ridwan",
+        student_batch: '1st',
+        student_email: 'ridwan@gmail.com'
+    },
+    {
+        student_id: 212,
+        student_name: "Habibur Rahman Rasel",
+        student_batch: '1st',
+        student_email: 'rasel@gmail.com'
+    },
+    {
+        student_id: 211,
+        student_name: "Morshidul Amin Ridwan",
+        student_batch: '1st',
+        student_email: 'ridwan@gmail.com'
+    },
+    {
+        student_id: 212,
+        student_name: "Habibur Rahman Rasel",
+        student_batch: '1st',
+        student_email: 'rasel@gmail.com'
+    },
+    {
+        student_id: 211,
+        student_name: "Morshidul Amin Ridwan",
+        student_batch: '1st',
+        student_email: 'ridwan@gmail.com'
+    },
+    {
+        student_id: 211,
+        student_name: "Morshidul Amin Ridwan",
+        student_batch: '1st',
+        student_email: 'ridwan@gmail.com'
+    }
 ];
 
 const Students = () => {

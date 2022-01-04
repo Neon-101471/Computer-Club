@@ -5,4 +5,7 @@
 
 .students-container {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    /*height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;*/
 }
