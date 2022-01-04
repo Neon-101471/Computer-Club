@@ -1,9 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import logo from "../../../logo.jpeg";
 
 const Navigation = () => {
+  // user destructure
+  const { user, logOut } = useAuth();
   return (
     <Navbar
       expand="lg"
@@ -28,13 +31,13 @@ const Navigation = () => {
               className="text-light"
             >
               <NavDropdown.Item as={Link} to="/about">
-              About Club
+                About Club
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/roles">
-              Roles and Regulation
+                Roles and Regulation
               </NavDropdown.Item>
             </NavDropdown>
-           
+
             <Nav.Link as={Link} to="/results" className="text-light">
               Results
             </Nav.Link>
@@ -74,9 +77,14 @@ const Navigation = () => {
                 2018 Panel
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/login" className="text-light">
-              Login
-            </Nav.Link>
+            {
+              !user?.displayName ? <Nav.Link as={Link} to="/login" className="text-light">
+                Login
+              </Nav.Link>
+                :
+                <Button variant="danger" onClick={() => logOut()}>LogOut {user?.displayName}</Button>
+            }
+
           </Nav>
         </Navbar.Collapse>
       </Container>
