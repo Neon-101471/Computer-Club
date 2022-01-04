@@ -6,18 +6,22 @@ import { useForm } from "react-hook-form";
 const EventForm = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data)
-
-        // axios.post('http://localhost:5000/add-notice', data)
-        //     .then(response => {
-        //         if (response.data.insertedId) {
-        //             alert('New product successfully added.');
-        //             reset();
-        //         }
-        //     })
+        const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+        const date = data.publishing_date;
+        const month = date.split('-');
+        const chrMonth = months[month[1] - 1];
+        data.chrMonth = chrMonth;
+        axios.post('http://localhost:5000/add-notice', data)
+            .then(response => {
+                if (response.data.insertedId) {
+                    alert('Notice successfully added.');
+                    reset();
+                }
+            })
     }
     return (
-        <div className='row event-container d-flex justify-content-center align-items-center'>
+        <div className='row event-container d-flex justify-content-center align-items-center py-5'>
+            <h2 className='text-center'>Add Notice</h2>
             <div className="col-md-5 d-flex justify-content-center align-items-center">
                 <img src="https://i.ibb.co/xJkHRBn/add-event.png" className='img-fluid' alt="" />
             </div>
@@ -28,7 +32,7 @@ const EventForm = () => {
                         <input {...register("name", { required: true, maxLength: 20 })} placeholder="Notice Heading" />
 
                         <p className='d-flex justify-content-start'>Notice Publishing Date</p>
-                        <input type="date" {...register("publishing-date", { required: true })} placeholder="Product price" />
+                        <input type="date" {...register("publishing_date", { required: true })} placeholder="Product price" />
 
                         <p className='d-flex justify-content-start'>Pdf Drive Public Link</p>
                         <input type="text" {...register("pdfFile", { required: true })} placeholder="pdf drive public URL" />

@@ -5,7 +5,7 @@ import NoticeForm from '../../../EventForm/NoticeForm/NoticeForm';
 const Outlet = () => {
     let { path } = useRouteMatch();
     return (
-        <div className='px-2 py-5'>
+        <div className=''>
             <Switch>
                 <Route exact path={path}>
                     <NoticeForm />
