@@ -6,14 +6,15 @@ import { useForm } from "react-hook-form";
 const EventForm = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        console.log(data)
 
-        axios.post('https://evening-stream-40669.herokuapp.com/products-collection', data)
-            .then(response => {
-                if (response.data.insertedId) {
-                    alert('New product successfully added.');
-                    reset();
-                }
-            })
+        // axios.post('http://localhost:5000/add-notice', data)
+        //     .then(response => {
+        //         if (response.data.insertedId) {
+        //             alert('New product successfully added.');
+        //             reset();
+        //         }
+        //     })
     }
     return (
         <div className='row event-container d-flex justify-content-center align-items-center'>
@@ -23,9 +24,18 @@ const EventForm = () => {
             <div className="col-md-7">
                 <div className="event-form p-0">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <p className='d-flex justify-content-start'>Notice Heading</p> <input {...register("name", { required: true, maxLength: 20 })} placeholder="Notice Heading" />
-                        <p className='d-flex justify-content-start'>Notice Publishing Date</p> <input type="date" {...register("publishing-date", { required: true })} placeholder="Product price" />
-                        <p className='d-flex justify-content-start'>Notice Description</p><textarea className="" {...register("description", { required: true })} placeholder="Notice description" />
+                        <p className='d-flex justify-content-start'>Notice Heading</p>
+                        <input {...register("name", { required: true, maxLength: 20 })} placeholder="Notice Heading" />
+
+                        <p className='d-flex justify-content-start'>Notice Publishing Date</p>
+                        <input type="date" {...register("publishing-date", { required: true })} placeholder="Product price" />
+
+                        <p className='d-flex justify-content-start'>Pdf Drive Public Link</p>
+                        <input type="text" {...register("pdfFile", { required: true })} placeholder="pdf drive public URL" />
+
+                        <p className='d-flex justify-content-start'>Notice Description</p>
+                        <textarea className="" {...register("description", { required: true })} placeholder="Notice description" />
+
                         <input className="rounded-2 p-1 border-0 fs-4" type="submit" id='submit-btn' />
                     </form>
                 </div>
