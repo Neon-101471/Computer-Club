@@ -1,5 +1,6 @@
 import React from 'react';
 import './Teachers.css';
+import { Container, Row } from 'react-bootstrap';
 
 const teachers = [
     {
@@ -90,10 +91,16 @@ const teachers = [
 
 const Teachers = () => {
     return (
-        <div className='teachers-container py-5'>
+        <div className='teachers-container pb-5'>
+            <Container fluid style={{ backgroundColor: '#F5F5F5', boxShadow: '8px 8px 22px #9fa4b3, -8px -8px 22px' }}>
+                <Container className='d-flex align-items-center justify-content-center' style={{ minHeight: '150px' }}>
+                    <Row>
+                        <h2 className='d-flex fw-bolder text-success' style={{ fontFamily: 'georgia' }}>Teachers, Computer Science & Engineering Department</h2>
+                    </Row>
+                </Container>
+            </Container>
             <div className='container'>
-                <h3 className='text-center mb-4'>Teachers, CSE Department</h3>
-                <div className="row row-cols-1 row-cols-md-3 g-3 mx-md-4 mx-lg-4">
+                <div className="row row-cols-1 row-cols-md-3 g-3 mx-md-4 mx-lg-4 mt-5">
                     {
                         teachers.map(teacher => <div className="col" key={teacher.teacher_id}>
                             <div className="card single-teacher">

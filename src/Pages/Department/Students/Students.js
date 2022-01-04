@@ -1,5 +1,6 @@
 import React from 'react';
 import './Students.css';
+import { Container, Row } from 'react-bootstrap';
 
 const students = [
     {
@@ -126,8 +127,15 @@ const students = [
 
 const Students = () => {
     return (
-        <div className='students-container m-5'>
-                <h3 className='text-center py-3'>Students, CSE Department</h3>
+        <div>
+            <Container fluid style={{ backgroundColor: '#F5F5F5', boxShadow: '8px 8px 22px #9fa4b3, -8px -8px 22px' }}>
+                <Container className='d-flex align-items-center justify-content-center' style={{ minHeight: '150px' }}>
+                    <Row>
+                        <h2 className='d-flex fw-bolder text-success' style={{ fontFamily: 'georgia' }}>Students, Computer Science & Engineering Department</h2>
+                    </Row>
+                </Container>
+            </Container>
+            <div className='students-container m-5'>
                 <div className="row row-cols-1 row-cols-md-4 g-3 pt-2">
                     {
                         students.map(student => <div className="col" key={student.student_id}>
@@ -141,6 +149,7 @@ const Students = () => {
                         </div>)
                     }
                 </div>
+            </div>
         </div>
     );
 };

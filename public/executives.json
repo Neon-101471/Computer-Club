@@ -1,0 +1,44 @@
+[
+    {
+      "ex_id": 501,
+      "name": "Mahir Adnan",
+      "designation": "General Secretary",
+      "email": "mahiradnan@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    },
+    {
+      "ex_id": 502,
+      "name": "Md. Abir Chowdhury",
+      "designation": "Vice-President Male",
+      "email": "mdabir@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    },
+    {
+      "ex_id": 503,
+      "name": "Urme Chakma",
+      "designation": "Vice-President Male",
+      "email": "urmechakma@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    },
+    {
+      "ex_id": 504,
+      "name": "Atikuzzaman Rana",
+      "designation": "Joint Secretary Mail",
+      "email": "atikrana@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    },
+    {
+      "ex_id": 505,
+      "name": "Pankajini Chakma",
+      "designation": "Joint Secretary Female",
+      "email": "pankajinichakma@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    },
+    {
+      "ex_id": 506,
+      "name": "Assad Khan Ifat",
+      "designation": "Welfare Secretary",
+      "email": "assadkhan@gmail.com",
+      "image": "https://i.ibb.co/HpwBvdY/User.png"
+    }
+  ]
