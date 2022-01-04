@@ -11,7 +11,7 @@ const EventForm = () => {
         const month = date.split('-');
         const chrMonth = months[month[1] - 1];
         data.chrMonth = chrMonth;
-        axios.post('http://localhost:5000/add-notice', data)
+        axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
             .then(response => {
                 if (response.data.insertedId) {
                     alert('Notice successfully added.');
@@ -29,7 +29,7 @@ const EventForm = () => {
                 <div className="event-form p-0">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <p className='d-flex justify-content-start'>Notice Heading</p>
-                        <input {...register("name", { required: true, maxLength: 20 })} placeholder="Notice Heading" />
+                        <input type="text" {...register("name", { required: true })} placeholder="Notice Heading" />
 
                         <p className='d-flex justify-content-start'>Notice Publishing Date</p>
                         <input type="date" {...register("publishing_date", { required: true })} placeholder="Product price" />
