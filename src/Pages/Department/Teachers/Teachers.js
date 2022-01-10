@@ -92,7 +92,7 @@ const teachers = [
 const Teachers = () => {
     const [teachers, setTeachers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/teachers')
+        fetch('https://computer-club-team.herokuapp.com/teachers')
             .then(res => res.json())
             .then(data => setTeachers(data))
     }, [])

@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const Executive = () => {
     const [executives, setExecutives] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/executives')
+        fetch('https://computer-club-team.herokuapp.com/executives')
             .then(res => res.json())
             .then(data => setExecutives(data))
     }, [])

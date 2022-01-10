@@ -16,7 +16,7 @@ const AddResult = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('http://localhost:5000/add-result', data)
+                axios.post('https://computer-club-team.herokuapp.com/add-result', data)
                     .then(result => {
                         console.log(result);
                         if (result?.data?.insertedId) {

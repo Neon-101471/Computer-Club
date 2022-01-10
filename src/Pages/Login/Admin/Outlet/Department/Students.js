@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const Students = () => {
     const [students, setStudents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/students')
+        fetch('https://computer-club-team.herokuapp.com/students')
             .then(res => res.json())
             .then(data => setStudents(data))
     }, [])

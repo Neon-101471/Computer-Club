@@ -16,7 +16,7 @@ const AddExecutive = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('http://localhost:5000/add-executive', data)
+                axios.post('https://computer-club-team.herokuapp.com/add-executive', data)
                     .then(result => {
                         console.log(result);
                         if (result?.data?.insertedId) {
