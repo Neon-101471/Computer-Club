@@ -10,6 +10,7 @@ const AllNotice = () => {
     }, [])
     return (
         <div className='py-5'>
+            <h2 className='fw-bolder text-center pb-3'>All Notices</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>

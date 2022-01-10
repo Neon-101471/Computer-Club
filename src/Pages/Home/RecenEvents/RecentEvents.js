@@ -11,8 +11,8 @@ const RecentEvents = () => {
 
   return (
     <div className="container">
-      <h2 className=" ">
-        RECENT EVENTS <hr />
+      <h2>
+        Recent Events <hr />
       </h2>
       <div className='d-flex'>
         <div className="row">

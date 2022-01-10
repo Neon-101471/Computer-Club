@@ -8,34 +8,23 @@ const Welcome = () => {
         <h4>
           WELCOME TO <hr />{" "}
         </h4>
-        <h1>RMSTU University Computer Club</h1>
+        <h1>RMSTU Computer Club</h1>
         <div className="row ">
           <div className="col-md-5 mt-3 p-2">
             <ReactPlayer
               width="100%"
-              height="300px"
-          
+              height="310px"
               controls
               url="https://youtu.be/7N2jks0AQb4"
             ></ReactPlayer>
           </div>
           <div className="col-md-7  mt-3 d-flex justify-content-center align-items-center">
-          <h5>
-            RMSTU University Computer Club (BUCC) is the oldest club of RMSTU
-            university founded by Mr. Annajiat Alim Rasel in 2001. This club
-            consists of a youthful team of passionate and hardworking Tech
-            Enthusiast students. They strive to learn more about the advanced
-            technologies of the 21st century. The club regularly offers
-            workshops on web development, graphics designing, problem solving,
-            and many other technological fields. To get the students engaging
-            they organize contests on competitive programming, graphics
-            designing, and even gaming, etc. Seminars and webinars are also held
-            with the participation of reputed personals in the Technology sector
-            of Bangladesh.
-          </h5>
+            <h5 style={{ textAlign: 'justify' }}>
+              RMSTU Computer Club (RCC) is the oldest club of Rangamati Science & Technology university founded by Rana Chakma (Former Chairman, CSE Dept.) and students of Computer Science and Engineering Department, in 2001. This club consists of a youthful team of passionate and hardworking tech enthusiast students. They strive to learn more about the advanced technologies of the 21st century. The club regularly offers programming contest, workshops on web development, graphics designing, problem solving, and many other technological fields. To get the students engaging they organize contests on competitive programming, graphics
+              designing, and even gaming, etc. Seminars and webinars are also held with the participation of reputed personals in the Technology sector of Bangladesh.
+            </h5>
+          </div>
         </div>
-        </div>
-       
       </div>
     </div>
   );

@@ -32,24 +32,24 @@ const workshops = [
         description: 'Introduction to freelancing. Proper guidelines for market places like upwork, fiverr etc',
         img: 'https://www.kindpng.com/picc/m/44-449405_transparent-background-computer-mouse-cartoon-hd-png-download.png'
     }
-]
+];
+
 const Workshops = () => {
     return (
-        <div className="container">
-            <h2 className="text-center">Workshop. <span style={{color:'gray'}}>Topics</span> </h2>
-              <Box sx={{ flexGrow: 1 }}>
-            <Container style={{}}>
-                
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    {
-                        workshops.map(workshop => <Workshop
-                            key={workshop.name}
-                            workshop={workshop}
-                        ></Workshop>)
-                    }
-                </Grid>
-            </Container>
-        </Box>
+        <div className="container p-0">
+            <h2 className="text-center">Workshop. <span style={{ color: 'gray' }}>Topics</span> </h2>
+            <Box sx={{ flexGrow: 1 }}>
+                <Container style={{ padding: '0px' }}>
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                        {
+                            workshops.map(workshop => <Workshop
+                                key={workshop.name}
+                                workshop={workshop}
+                            ></Workshop>)
+                        }
+                    </Grid>
+                </Container>
+            </Box>
         </div>
     );
 };

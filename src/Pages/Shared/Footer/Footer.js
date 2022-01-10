@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import ClubLogo from '../../Images/Club-logo.png';
 
 const Footer = () => {
     return (
@@ -10,7 +9,7 @@ const Footer = () => {
                 {/* special container */}
                 <div className="col-md-3 special-container ps-md-2 ps-md-2">
                     <div className=''>
-                        <img className='img-fluid my-2' src={ClubLogo} alt="" />
+                        <img className='img-fluid my-2' src="https://i.ibb.co/R477c2j/Club-logo.jpg" alt="" />
                     </div>
                     <p>Feedback & Complaints</p>
                     <p>Upcoming Events</p>
@@ -59,7 +58,7 @@ const Footer = () => {
             </div>
             <div className='copyright-area'>
                 <hr />
-                <p className='text-center'>&copy; All rights reserved | <a href="https://rmstu.edu.bd/">RMSTU</a> Computer Club-2022</p>
+                <p className='text-center' style={{ fontSize: '12px' }}>&copy; All rights reserved | <a href="https://rmstu.edu.bd/">RMSTU</a> Computer Club-2022</p>
             </div>
         </div>
     );

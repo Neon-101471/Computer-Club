@@ -23,7 +23,7 @@ const EventForm = () => {
             <div className="col-md-7">
                 <div className="event-form p-0">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <p className='d-flex justify-content-start'>Contest Name</p><input {...register("name", { required: true, maxLength: 20 })} placeholder="Contest name" />
+                        <p className='d-flex justify-content-start'>Contest Name</p><input {...register("name", { required: true })} placeholder="Contest name" />
                         <p className='d-flex justify-content-start'>Result Publishing Date</p><input type="date" {...register("publishing-date", { required: true })} placeholder="Result publishing date" />
                         <p className='d-flex justify-content-start'>Insert Result Image Link</p> <input {...register("img", { required: true })} placeholder="Insert image url" />
                         <p className='d-flex justify-content-start'>Result PDF Link</p> <input {...register("pdfLink", { required: true })} placeholder="Insert drive link" />

@@ -50,7 +50,8 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const destination = location?.state?.from || '/';
+                const checkAdmin = admin ? '/dashboard' : '/';
+                const destination = location?.state?.from || checkAdmin;
                 history.replace(destination);
                 setAuthError('');
             })
@@ -66,7 +67,8 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-                const destination = location?.state?.from || '/';
+                const checkAdmin = admin ? '/dashboard' : '/';
+                const destination = location?.state?.from || checkAdmin;
                 history.replace(destination);
 
                 setAuthError('');
@@ -99,7 +101,13 @@ const useFirebase = () => {
     useEffect(() => {
         fetch(`https://computer-club-team.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
-            .then(data => setAdmin(data?.admin));
+            .then(data => {
+                if (data?.role === 'admin') {
+                    setAdmin(true)
+                } else {
+                    setAdmin(false)
+                }
+            });
     }, [user.email]);
 
     //Logout user
