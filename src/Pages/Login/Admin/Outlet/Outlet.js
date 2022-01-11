@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
-import NoticeForm from '../../../EventForm/NoticeForm/NoticeForm';
+import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddNotice from './AddNotice/AddNotice';
 import AllNotice from './AllNotice/AllNotice';
+import MakeAdmin from './MakeAdmin/MakeAdmin';
 import Users from './Users/Users';
 const Outlet = () => {
     let { path } = useRouteMatch();
@@ -11,20 +12,23 @@ const Outlet = () => {
         <div className=''>
             <Switch>
                 <Route exact path={path}>
-                    <NoticeForm />
+                    <h2 className='fw-bolder my-5 py-5 text-center'>Start to operation your profile</h2>
                 </Route>
-                <Route path={`${path}/all-programming-contest`}>
+                <AdminRoute path={`${path}/all-programming-contest`}>
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequatur explicabo repellendus libero similique alias perspiciatis sapiente impedit. Magni minus, eaque similique in officiis debitis rem. Temporibus molestiae illum maiores.</h2>
-                </Route>
-                <Route path={`${path}/users`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/users`}>
                     <Users />
-                </Route>
-                <Route path={`${path}/all-notice`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/make-admin`}>
+                    <MakeAdmin />
+                </AdminRoute>
+                <AdminRoute path={`${path}/all-notice`}>
                     <AllNotice />
-                </Route>
-                <Route path={`${path}/add-notice`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-notice`}>
                     <AddNotice />
-                </Route>
+                </AdminRoute>
             </Switch>
         </div>
     );

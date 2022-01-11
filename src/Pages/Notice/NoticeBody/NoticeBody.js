@@ -6,14 +6,14 @@ import NoticeDemo from '../NoticeDemo/NoticeDemo';
 import NoticeDetails from '../NoticeDetails/NoticeDetails';
 
 const notices = [
-    { id: 1, title: 'notice 01', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 2, title: 'notice 02', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 3, title: 'notice 03', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 4, title: 'notice 04', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 5, title: 'notice 05', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 6, title: 'notice 06', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-    { id: 7, title: 'notice 07', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'description' },
-]
+    { id: 1, title: 'Notice 01', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 2, title: 'Notice 02', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 3, title: 'Notice 03', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 4, title: 'Notice 04', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 5, title: 'Notice 05', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 6, title: 'Notice 06', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+    { id: 7, title: 'Notice 07', date: { month: 'dec', day: '24' }, fullDate: '24th dec 2021', description: 'Description' },
+];
 
 const NoticeBody = () => {
     let { path, url } = useRouteMatch();
@@ -22,7 +22,6 @@ const NoticeBody = () => {
             <Row className=''>
                 <Col xs={12} md={4}>
                     <h3>Notice <span className='color-green'>Board</span></h3>
-
                     {notices?.map(notice => <Row key={notice?.id} className='top-dotted-border pb-3'>
                         <Col xs={12} md={2} className='bottom-solid-border'>
                             <h3 className='color-green'>24</h3>
@@ -35,8 +34,8 @@ const NoticeBody = () => {
                             </Link>
                         </Col>
                     </Row>)}
-
                 </Col>
+
                 <Col xs={12} md={8} className='ps-5'>
                     <Switch>
                         <Route exact path={path}>

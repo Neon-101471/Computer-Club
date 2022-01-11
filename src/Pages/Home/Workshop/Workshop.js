@@ -9,15 +9,13 @@ const Workshop = ({ workshop }) => {
   return (
     <>
       <Grid item xs={4} sm={4} md={4}>
-        <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }} className="d-flex">
-          {/* <img style={{ width: "auto", height: "20px" }} src={img} alt="" /> */}
+        <Card sx={{ minWidth: 275, border: 0, boxShadow: 0, paddingX: '10px' }} className="d-flex p-md-1">
           <CardMedia
-                component="img"
-                style={{ width: 'auto', height: '30px', margin: '0 auto',marginTop:"20px" }}
-                image={img}
-                alt="green iguana"
-            />
-
+            component="img"
+            style={{ width: 'auto', height: '30px', margin: '0 auto', marginTop: "20px" }}
+            image={img}
+            alt="green iguana"
+          />
           <CardContent>
             <Typography variant="h6" component="div">
               {name}
@@ -26,26 +24,8 @@ const Workshop = ({ workshop }) => {
               {description}
             </Typography>
           </CardContent>
-
-          {/* <div class="d-flex">
-            <div>
-              <img style={{ width: "20px", height: "20px" }} src={img} alt="" />
-            </div>
-            <div><h6>{name}</h6></div>
-          </div> */}
         </Card>
       </Grid>
-      {/* <div class="container">
-        <div class="col-md-4">
-          <div>
-            {" "}
-            <img style={{ width: "auto", height: "20px" }} src={img} alt="" />
-          </div>
-          <div>
-            <h1>{name}</h1>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

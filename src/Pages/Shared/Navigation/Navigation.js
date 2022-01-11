@@ -2,11 +2,10 @@ import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
-import logo from "../../../logo.jpeg";
 
 const Navigation = () => {
   // user destructure
-  const { user, logOut } = useAuth();
+  const { user, logOut, admin } = useAuth();
   return (
     <Navbar
       expand="lg"
@@ -17,7 +16,7 @@ const Navigation = () => {
     >
       <Container>
         <Navbar.Brand href="/" className="text-light">
-          <img className="site-logo" src={logo} alt="Computer Club Logo" />
+          <img className="site-logo" src="https://i.ibb.co/R477c2j/Club-logo.jpg" alt="Computer Club Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -31,10 +30,10 @@ const Navigation = () => {
               className="text-light"
             >
               <NavDropdown.Item as={Link} to="/about">
-                About Club
+                About RCC
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/roles">
-                Roles and Regulation
+              <NavDropdown.Item as={Link} to="/rules">
+                Rules and Regulation
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -64,19 +63,25 @@ const Navigation = () => {
               id="basic-nav-dropdown"
               className="text-light"
             >
-              <NavDropdown.Item as={Link} to="/current-panel">
-                Current Panel
+              <NavDropdown.Item as={Link} to="/executive-panel-2021">
+                2020-2021 Panel
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/2020-panel">
-                2020 Panel
+                2019-2020 Panel
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/2019-panel">
-                2019 Panel
+                2018-2019 Panel
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/2018-panel">
-                2018 Panel
+                2017-2018 Panel
               </NavDropdown.Item>
             </NavDropdown>
+            {
+              admin && <Nav.Link as={Link} to="/dashboard" className="text-light fw-bolder">
+                Dashboard
+              </Nav.Link>
+            }
+
             {
               !user?.displayName ? <Nav.Link as={Link} to="/login" className="text-light">
                 Login
