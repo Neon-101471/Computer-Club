@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 
-const AddExecutive = () => {
+const AddProgrammingContest = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         //alert set
@@ -33,28 +33,28 @@ const AddExecutive = () => {
     }
     return (
         <div className='row event-container d-flex justify-content-center align-items-center py-5'>
-            <h2 className='text-center'>Add Executive</h2>
+            <h2 className='text-center'>Add Programming Contest</h2>
 
             <div className="col-md-7">
                 <div className="event-form p-0 text-start">
                     <form onSubmit={handleSubmit(onSubmit)} style={{height: '600px'}}>
-                        <p className='justify-content-start'>Name</p>
-                        <input type="text" {...register("name", { required: true })} placeholder="Executive Name" />
+                        <p className='justify-content-start'>Programming Contest Name</p>
+                        <input type="text" {...register("name", { required: true })} placeholder="Programming Contest Name" />
 
-                        <p className='justify-content-start'>Title(if)</p>
-                        <input type="text" {...register("title")} placeholder="Like Assistant Professor, Dept. of CSE" />
+                        <p className='justify-content-start'>Starts On</p>
+                        <input type="date" {...register("starts-on")} placeholder="14 January 2022" />
 
-                        <p className='d-flex justify-content-start'>Designation</p>
-                        <input type="text" {...register("designation", { required: true })} />
+                        <p className='d-flex justify-content-start'>Starts At</p>
+                        <input type="time" {...register("starts-at", { required: true })} />
 
-                        <p className='d-flex justify-content-start'>Email</p>
-                        <input type="email" {...register("email", { required: true })} placeholder="Email" />
+                        <p className='d-flex justify-content-start'>Problem Number</p>
+                        <input type="number" {...register("problem-number", { required: true })} placeholder="10" />
 
-                        <p className='d-flex justify-content-start'>Photo</p>
-                        <input type="text" {...register("photoURL", { required: true })} placeholder="Photo link" />
+                        <p className='d-flex justify-content-start'>Contest Duration</p>
+                        <input type="text" {...register("contest-duration", { required: true })} placeholder="3 Hours" />
 
-                        <p className='d-flex justify-content-start'>Panel</p>
-                        <input type="text" {...register("panel", { required: true })} maxLength={9} placeholder="2020-2021" />
+                        <p className='d-flex justify-content-start'>Details and Prizing</p>
+                        <input type="text" {...register("details", { required: true })} maxLength={9} placeholder="Details information of the programming contest" />
 
                         <input className="rounded-2 p-1 border-0 fs-4" type="submit" id='submit-btn' />
                     </form>
@@ -64,4 +64,4 @@ const AddExecutive = () => {
     );
 };
 
-export default AddExecutive;
+export default AddProgrammingContest;

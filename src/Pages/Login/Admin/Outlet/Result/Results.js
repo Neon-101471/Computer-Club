@@ -28,8 +28,8 @@ const Results = () => {
                             <td>{notice?.name}</td>
                             <td>{notice?.description}</td>
                             <td><a href={`${notice?.pdfFile}`} target='_blank' rel="noreferrer">File Link</a></td>
-                            <td>
-                                <Button variant='warning'>Edit</Button>
+                            <td className='d-flex justify-content-evenly'>
+                                <Button variant='warning' className=''>Edit</Button>
                                 <Button variant='danger'>Delete</Button>
                             </td>
                         </tr>

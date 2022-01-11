@@ -28,7 +28,7 @@ const Students = () => {
                             <td>{student?.name} <br />{student?.batch}</td>
                             <td>{student?.session}</td>
                             <td><a href={`${student?.email}`}>{student?.email}</a></td>
-                            <td>
+                            <td className='d-flex justify-content-evenly'>
                                 <Button variant='warning'>Edit</Button>
                                 <Button variant='danger'>Delete</Button>
                             </td>

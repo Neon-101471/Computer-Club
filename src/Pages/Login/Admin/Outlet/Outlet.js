@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddNotice from './AddNotice/AddNotice';
+import AddProgrammingContest from './AddProgrammingContest/AddProgrammingContest';
 import AllNotice from './AllNotice/AllNotice';
 import AddStudent from './Department/AddStudent';
 import AddTeacher from './Department/AddTeacher';
@@ -24,6 +25,9 @@ const Outlet = () => {
                 </Route>
                 <AdminRoute path={`${path}/all-programming-contest`}>
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequatur explicabo repellendus libero similique alias perspiciatis sapiente impedit. Magni minus, eaque similique in officiis debitis rem. Temporibus molestiae illum maiores.</h2>
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-programming-contest`}>
+                    <AddProgrammingContest />
                 </AdminRoute>
                 <AdminRoute path={`${path}/users`}>
                     <Users />

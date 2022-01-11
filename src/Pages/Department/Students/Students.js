@@ -1,129 +1,104 @@
 import React from 'react';
 import './Students.css';
-import { Container, Row } from 'react-bootstrap';
 import Banner from '../../Notice/Banner/Banner';
 
 const students = [
     {
         student_id: 201,
-        student_name: "Yousha Mahmud Khan",
-        student_batch: '1st',
-        student_email: 'yousha@gmail.com'
+        name: "Yousha Mahmud Khan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'yousha@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 202,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
+        name: "Morshidul Amin Ridwan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'ridwan@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 203,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
+        name: "Habibur Rahman Rasel",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'rasel@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 204,
-        student_name: "Yousha Mahmud Khan",
-        student_batch: '1st',
-        student_email: 'yousha@gmail.com'
+        name: "Yousha Mahmud Khan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'yousha@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 205,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
+        name: "Morshidul Amin Ridwan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'ridwan@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 206,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
+        name: "Habibur Rahman Rasel",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'rasel@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 207,
-        student_name: "Yousha Mahmud Khan",
-        student_batch: '1st',
-        student_email: 'yousha@gmail.com'
+        name: "Yousha Mahmud Khan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'yousha@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 208,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
+        name: "Morshidul Amin Ridwan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'ridwan@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 209,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
+        name: "Habibur Rahman Rasel",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'rasel@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 210,
-        student_name: "Yousha Mahmud Khan",
-        student_batch: '1st',
-        student_email: 'yousha@gmail.com'
+        name: "Morshidul Amin Ridwan",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'ridwan@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
+        name: "Habibur Rahman Rasel",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'rasel@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
     {
         student_id: 212,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
+        name: "Habibur Rahman Rasel",
+        batch: '1st',
+        session: '2021-2022',
+        email: 'rasel@gmail.com',
+        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
     },
-    {
-        student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
-    },
-    {
-        student_id: 212,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
-    },
-    {
-        student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
-    },
-    {
-        student_id: 212,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
-    },
-    {
-        student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
-    },
-    {
-        student_id: 212,
-        student_name: "Habibur Rahman Rasel",
-        student_batch: '1st',
-        student_email: 'rasel@gmail.com'
-    },
-    {
-        student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
-    },
-    {
-        student_id: 211,
-        student_name: "Morshidul Amin Ridwan",
-        student_batch: '1st',
-        student_email: 'ridwan@gmail.com'
-    }
 ];
 
 const Students = () => {
@@ -136,9 +111,10 @@ const Students = () => {
                         students.map(student => <div className="col" key={student.student_id}>
                             <div className="card single-student">
                                 <div className="card-body">
-                                    <h5 className="card-title">{student.student_name}</h5>
-                                    <p>{student.student_batch} Batch</p>
-                                    <p className="card-text">Email: {student.student_email}</p>
+                                    <h5 className="card-title">{student.name}</h5>
+                                    <p>{student.batch} Batch</p>
+                                    <p>{student.session} Session</p>
+                                    <p className="card-text">Email: {student.email}</p>
                                 </div>
                             </div>
                         </div>)
