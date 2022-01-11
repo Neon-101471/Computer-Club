@@ -4,7 +4,15 @@ import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddNotice from './AddNotice/AddNotice';
 import AllNotice from './AllNotice/AllNotice';
+import AddStudent from './Department/AddStudent';
+import AddTeacher from './Department/AddTeacher';
+import Students from './Department/Students';
+import Teachers from './Department/Teachers';
+import AddExecutive from './Executive/AddExecutive';
+import Executive from './Executive/Executive';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
+import AddResult from './Result/AddResult';
+import Results from './Result/Results';
 import Users from './Users/Users';
 const Outlet = () => {
     let { path } = useRouteMatch();
@@ -28,6 +36,30 @@ const Outlet = () => {
                 </AdminRoute>
                 <AdminRoute path={`${path}/add-notice`}>
                     <AddNotice />
+                </AdminRoute>
+                <AdminRoute path={`${path}/results`}>
+                    <Results />
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-new-results`}>
+                    <AddResult />
+                </AdminRoute>
+                <AdminRoute path={`${path}/all-executive`}>
+                    <Executive />
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-executive`}>
+                    <AddExecutive />
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-student`}>
+                    <AddStudent />
+                </AdminRoute>
+                <AdminRoute path={`${path}/students`}>
+                    <Students />
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-teacher`}>
+                    <AddTeacher />
+                </AdminRoute>
+                <AdminRoute path={`${path}/teachers`}>
+                    <Teachers />
                 </AdminRoute>
             </Switch>
         </div>

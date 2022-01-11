@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Teachers.css';
 import Banner from '../../Notice/Banner/Banner';
-
+/*
 const teachers = [
     {
         teacher_id: 101,
@@ -87,16 +87,22 @@ const teachers = [
         email: 'tushar1304017@gmail.com',
         image: 'https://i.ibb.co/JjNSRX0/Mohibul-copy-1.jpg',
     }
-];
+];*/
 
 const Teachers = () => {
+    const [teachers, setTeachers] = useState([]);
+    useEffect(() => {
+        fetch('https://computer-club-team.herokuapp.com/teachers')
+            .then(res => res.json())
+            .then(data => setTeachers(data))
+    }, [])
     return (
         <div className='teachers-container pb-5'>
             <Banner title={'Teachers, CSE Department'}></Banner>
             <div className='container'>
                 <div className="row row-cols-1 row-cols-md-3 g-3 mx-md-4 mx-lg-4 mt-5">
                     {
-                        teachers.map(teacher => <div className="col" key={teacher.teacher_id}>
+                        teachers.map(teacher => <div className="col" key={teacher._id}>
                             <div className="card single-teacher">
                                 <div className="teacher-image d-flex justify-content-center align-items-center">
                                     <img src={teacher.image} className="card-img-top" alt="..." />

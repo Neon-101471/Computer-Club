@@ -38,7 +38,7 @@ const MakeAdmin = () => {
         <Container className='mt-5 pt-5'>
             <Row className='d-flex justify-content-center'>
                 <Col xs={12} md={4} className='shadow p-4 rounded'>
-                    <h2 className='fw-bolder'>Make Newya Admin</h2>
+                    <h2 className='fw-bolder'>Make New Admin</h2>
                     <form className='mt-3' onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>

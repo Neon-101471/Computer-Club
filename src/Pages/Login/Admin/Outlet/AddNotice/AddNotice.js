@@ -1,22 +1,39 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const AddNotice = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-        const date = data.publishing_date;
-        const month = date.split('-');
-        const chrMonth = months[month[1] - 1];
-        data.chrMonth = chrMonth;
-        axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
-            .then(response => {
-                if (response.data.insertedId) {
-                    alert('Notice successfully added.');
-                    reset();
-                }
-            })
+        //alert set
+        Swal.fire({
+            title: `Are you sure to add result!!!`,
+            showDenyButton: true,
+            confirmButtonText: 'Yes',
+            denyButtonText: `No`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+                const date = data.publishing_date;
+                const month = date.split('-');
+                const chrMonth = months[month[1] - 1];
+                data.chrMonth = chrMonth;
+                //pass data in backend
+                axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
+                    .then(response => {
+                        if (response.data.insertedId) {
+                            Swal.fire('Result!', '', 'success')
+                            reset();
+                        } else {
+                            Swal.fire(`${result?.data?.message}`, '', 'info')
+                        }
+                    })
+            } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+            }
+        })
     }
     return (
         <div className='row event-container d-flex justify-content-center align-items-center py-5'>

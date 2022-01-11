@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 
-const AllNotice = () => {
-    const [notices, setNotices] = useState([]);
+const Results = () => {
+    const [results, setResults] = useState([]);
     useEffect(() => {
-        fetch('https://computer-club-team.herokuapp.com/all-notice')
+        fetch('https://computer-club-team.herokuapp.com/results')
             .then(res => res.json())
-            .then(data => setNotices(data))
+            .then(data => setResults(data))
     }, [])
     return (
         <div className='py-5'>
-            <h2 className='fw-bolder text-center pb-3'>All Notices</h2>
+            <h2 className='fw-bolder text-center pb-3'>Results List</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -23,7 +23,7 @@ const AllNotice = () => {
                 </thead>
                 <tbody>
                     {
-                        notices?.map(notice => <tr key={notice?._id}>
+                        results?.map(notice => <tr key={notice?._id}>
                             <td>{notice?.publishing_date}</td>
                             <td>{notice?.name}</td>
                             <td>{notice?.description}</td>
@@ -42,4 +42,4 @@ const AllNotice = () => {
     );
 };
 
-export default AllNotice;
+export default Results;
