@@ -42,7 +42,7 @@ const AddStudents = () => {
                         <input type="text" {...register("name", { required: true })} placeholder="Student Name" />
 
                         <p className='justify-content-start'>Batch</p>
-                        <input type="text" {...register("batch")} placeholder="Batch 1" />
+                        <input type="number" {...register("batch")} placeholder="1" />
 
                         <p className='d-flex justify-content-start'>Email</p>
                         <input type="email" {...register("email", { required: true })} placeholder="Email" />

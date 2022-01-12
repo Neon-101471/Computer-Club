@@ -14,9 +14,9 @@ const Students = () => {
                 setUiData(data)
             });
     }, [])
-    var uniqueBatch = [];
+    let uniqueBatch = [];
     students.filter(function (item) {
-        var i = uniqueBatch.findIndex(x => x.batch === item.batch);
+        let i = uniqueBatch.findIndex(x => x.batch === item.batch);
         if (i <= -1) {
             uniqueBatch.push(item);
         }
@@ -54,7 +54,7 @@ const Students = () => {
                     <Col xs={12} md={2}>
                         <h2>Jump Batch</h2>
                         {uniqueBatch.map(batch =>
-                            <Button className='w-100' variant='light' onClick={() => filterData(batch.batch)}>{batch.batch}</Button>
+                            <Button className='w-100' variant='light' onClick={() => filterData(batch.batch)}>Batch-{batch.batch}</Button>
                         )}
                     </Col>
                 </Row>

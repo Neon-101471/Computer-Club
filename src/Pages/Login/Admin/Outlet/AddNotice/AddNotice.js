@@ -18,8 +18,10 @@ const AddNotice = () => {
                 const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
                 const date = data.publishing_date;
                 const month = date.split('-');
+                const day = month[2];
                 const chrMonth = months[month[1] - 1];
                 data.chrMonth = chrMonth;
+                data.day = day;
                 //pass data in backend
                 axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
                     .then(response => {
