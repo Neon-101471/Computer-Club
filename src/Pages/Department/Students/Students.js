@@ -1,107 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Students.css';
 import Banner from '../../Notice/Banner/Banner';
-
-const students = [
-    {
-        student_id: 201,
-        name: "Yousha Mahmud Khan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'yousha@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 202,
-        name: "Morshidul Amin Ridwan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'ridwan@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 203,
-        name: "Habibur Rahman Rasel",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'rasel@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 204,
-        name: "Yousha Mahmud Khan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'yousha@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 205,
-        name: "Morshidul Amin Ridwan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'ridwan@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 206,
-        name: "Habibur Rahman Rasel",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'rasel@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 207,
-        name: "Yousha Mahmud Khan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'yousha@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 208,
-        name: "Morshidul Amin Ridwan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'ridwan@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 209,
-        name: "Habibur Rahman Rasel",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'rasel@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 210,
-        name: "Morshidul Amin Ridwan",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'ridwan@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 211,
-        name: "Habibur Rahman Rasel",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'rasel@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-    {
-        student_id: 212,
-        name: "Habibur Rahman Rasel",
-        batch: '1st',
-        session: '2021-2022',
-        email: 'rasel@gmail.com',
-        photoURL: 'https://cdn.codechef.com/download/banner/1641806910.png'
-    },
-];
+import { Card } from 'react-bootstrap';
 
 const Students = () => {
+    const [students, setStudents] = useState([]);
+    useEffect(() => {
+        fetch('https://computer-club-team.herokuapp.com/students')
+            .then(res => res.json())
+            .then(data => setStudents(data));
+    }, [])
+
     return (
         <div>
             <Banner title={"Students, CSE Department"} />
@@ -110,6 +19,9 @@ const Students = () => {
                     {
                         students.map(student => <div className="col" key={student.student_id}>
                             <div className="card single-student">
+                                <div className='d-flex justify-content-center py-3'>
+                                    <img src={student.photoURL} style={{ width: '80px', height: '80px', borderRadius: '50%' }} alt="" />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{student.name}</h5>
                                     <p>{student.batch} Batch</p>
