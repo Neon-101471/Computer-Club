@@ -8,7 +8,7 @@ const AddNotice = () => {
     const onSubmit = data => {
         //alert set
         Swal.fire({
-            title: `Are you sure to add result!!!`,
+            title: `Are you sure to add Notice!!!`,
             showDenyButton: true,
             confirmButtonText: 'Yes',
             denyButtonText: `No`,
@@ -24,7 +24,7 @@ const AddNotice = () => {
                 axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
                     .then(response => {
                         if (response.data.insertedId) {
-                            Swal.fire('Result!', '', 'success')
+                            Swal.fire('Added notice', '', 'success')
                             reset();
                         } else {
                             Swal.fire(`${result?.data?.message}`, '', 'info')

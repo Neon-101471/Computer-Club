@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -9,6 +10,14 @@ const Users = () => {
             .then(data => setUsers(data))
     }, [])
 
+    // handle edit 
+    const handleAdmin = id => {
+        Swal.fire(
+            'The Edit not work now?',
+            `You can't make admin here now, visit make admin page to make admin?`,
+            'question'
+        )
+    }
     return (
         <div className='py-5'>
             <Table striped bordered hover>
@@ -29,7 +38,7 @@ const Users = () => {
                             <td>{user?.email}</td>
                             <td>{user.role ? user.role : 'General'}</td>
                             <td className='d-flex justify-content-evenly'>
-                                <Button variant='warning'>Make Admin</Button>
+                                <Button variant='warning' onClick={() => handleAdmin(user._id)}>Make Admin</Button>
                             </td>
                         </tr>
                         )

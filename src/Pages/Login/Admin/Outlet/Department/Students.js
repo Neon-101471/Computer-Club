@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const Students = () => {
     const [students, setStudents] = useState([]);
@@ -8,6 +10,42 @@ const Students = () => {
             .then(res => res.json())
             .then(data => setStudents(data))
     }, [])
+
+    // handle edit 
+    const handleEdit = id => {
+        Swal.fire(
+            'The Edit not work now?',
+            `You can delete this rather edit than add again?`,
+            'question'
+        )
+    }
+    //handle delete 
+    const handleDelete = id => {
+        Swal.fire({
+            title: `Are you sure to delete Student!!!`,
+            showDenyButton: true,
+            confirmButtonText: 'Yes',
+            denyButtonText: `No`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                //pass req in backend for delete
+                axios.delete(`http://localhost:5000/students/${id}`)
+                    .then(result => {
+                        if (result?.data?.deletedCount > 0) {
+                            Swal.fire(`Student! Deleted`, '', 'success')
+                            const updateStudents = students.filter(student => student?._id !== id);
+                            setStudents(updateStudents);
+                        } else {
+                            Swal.fire(`${result?.data?.message}`, '', 'info')
+                        }
+                    })
+            } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+            }
+        })
+    }
+
     return (
         <div className='py-5'>
             <h2 className='fw-bolder text-center pb-3'>All Students</h2>
@@ -29,8 +67,8 @@ const Students = () => {
                             <td>{student?.session}</td>
                             <td><a href={`${student?.email}`}>{student?.email}</a></td>
                             <td className='d-flex justify-content-evenly'>
-                                <Button variant='warning'>Edit</Button>
-                                <Button variant='danger'>Delete</Button>
+                                <Button variant='warning' onClick={() => handleEdit(student._id)}>Edit</Button>
+                                <Button variant='danger' onClick={() => handleDelete(student._id)}>Delete</Button>
                             </td>
                         </tr>
                         )

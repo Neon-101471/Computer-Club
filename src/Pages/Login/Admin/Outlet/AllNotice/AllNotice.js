@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const AllNotice = () => {
     const [notices, setNotices] = useState([]);
@@ -8,6 +10,42 @@ const AllNotice = () => {
             .then(res => res.json())
             .then(data => setNotices(data))
     }, [])
+
+    // handle edit 
+    const handleEdit = id => {
+        Swal.fire(
+            'The Edit not work now?',
+            `You can delete this rather edit than add again?`,
+            'question'
+        )
+    }
+    //handle delete 
+    const handleDelete = id => {
+        Swal.fire({
+            title: `Are you sure to delete Notice!!!`,
+            showDenyButton: true,
+            confirmButtonText: 'Yes',
+            denyButtonText: `No`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                //pass req in backend for delete
+                axios.delete(`http://localhost:5000/notices/${id}`)
+                    .then(result => {
+                        if (result?.data?.deletedCount > 0) {
+                            Swal.fire(`Notice! Deleted`, '', 'success')
+                            const updateNotices = notices.filter(event => event?._id !== id);
+                            setNotices(updateNotices);
+                        } else {
+                            Swal.fire(`${result?.data?.message}`, '', 'info')
+                        }
+                    })
+            } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+            }
+        })
+    }
+
     return (
         <div className='py-5'>
             <h2 className='fw-bolder text-center pb-3'>All Notices</h2>
@@ -26,11 +64,11 @@ const AllNotice = () => {
                         notices?.map(notice => <tr key={notice?._id}>
                             <td>{notice?.publishing_date}</td>
                             <td>{notice?.name}</td>
-                            <td>{notice?.description}</td>
+                            <td className='w-50'>{notice?.description.split(0, 100)} ...</td>
                             <td><a href={`${notice?.pdfFile}`} target='_blank' rel="noreferrer">File Link</a></td>
                             <td className='d-flex justify-content-evenly'>
-                                <Button variant='warning'>Edit</Button>
-                                <Button variant='danger'>Delete</Button>
+                                <Button variant='warning' onClick={() => handleEdit(notice._id)}>Edit</Button>
+                                <Button variant='danger' onClick={() => handleDelete(notice._id)}>Delete</Button>
                             </td>
                         </tr>
                         )

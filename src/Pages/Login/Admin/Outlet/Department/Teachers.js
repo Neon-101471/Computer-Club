@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const Teachers = () => {
     const [teachers, setTeachers] = useState([]);
@@ -16,6 +18,41 @@ const Teachers = () => {
             <span className="visually-hidden">Loading...</span>
         </div>
     }
+    // handle edit 
+    const handleEdit = id => {
+        Swal.fire(
+            'The Edit not work now?',
+            `You can delete this rather edit than add again?`,
+            'question'
+        )
+    }
+    //handle delete 
+    const handleDelete = id => {
+        Swal.fire({
+            title: `Are you sure to delete teacher!!!`,
+            showDenyButton: true,
+            confirmButtonText: 'Yes',
+            denyButtonText: `No`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                //pass req in backend for delete
+                axios.delete(`http://localhost:5000/teachers/${id}`)
+                    .then(result => {
+                        if (result?.data?.deletedCount > 0) {
+                            Swal.fire(`teacher! Deleted`, '', 'success')
+                            const updateTeachers = teachers.filter(teacher => teacher?._id !== id);
+                            setTeachers(updateTeachers);
+                        } else {
+                            Swal.fire(`${result?.data?.message}`, '', 'info')
+                        }
+                    })
+            } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+            }
+        })
+    }
+
     return (
         <div className='py-5'>
             <h2 className='fw-bolder text-center pb-3'>All Teachers</h2>
@@ -36,9 +73,9 @@ const Teachers = () => {
                             <td>{teacher?.name}</td>
                             <td>{teacher?.designation}</td>
                             <td><a href={`${teacher?.email}`}>{teacher?.email}</a></td>
-                            <td className='d-flex justify-content-evenly'>
-                                <Button variant='warning'>Edit</Button>
-                                <Button variant='danger'>Delete</Button>
+                            <td className='d-flex justify-content-evenly align-items-center'>
+                                <Button variant='warning' onClick={() => handleEdit(teacher._id)}>Edit</Button>
+                                <Button variant='danger' onClick={() => handleDelete(teacher._id)}>Delete</Button>
                             </td>
                         </tr>
                         )
