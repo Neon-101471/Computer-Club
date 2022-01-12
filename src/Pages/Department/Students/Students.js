@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Students.css';
 import Banner from '../../Notice/Banner/Banner';
-import { Card } from 'react-bootstrap';
 
 const Students = () => {
     const [students, setStudents] = useState([]);
