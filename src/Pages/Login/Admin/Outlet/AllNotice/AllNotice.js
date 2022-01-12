@@ -30,7 +30,7 @@ const AllNotice = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/notices/${id}`)
+                axios.delete(`https://computer-club-team.herokuapp.com/notices/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`Notice! Deleted`, '', 'success')

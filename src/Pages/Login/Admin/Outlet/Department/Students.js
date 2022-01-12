@@ -30,7 +30,7 @@ const Students = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/students/${id}`)
+                axios.delete(`https://computer-club-team.herokuapp.com/students/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`Student! Deleted`, '', 'success')

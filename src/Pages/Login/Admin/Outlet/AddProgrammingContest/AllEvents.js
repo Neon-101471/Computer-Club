@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const AllEvents = () => {
     const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://computer-club-team.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
@@ -30,7 +30,7 @@ const AllEvents = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/event/${id}`)
+                axios.delete(`https://computer-club-team.herokuapp.com/event/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`Event! Deleted`, '', 'success')

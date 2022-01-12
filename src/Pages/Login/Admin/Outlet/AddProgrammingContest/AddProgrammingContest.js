@@ -16,7 +16,7 @@ const AddProgrammingContest = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('http://localhost:5000/add-event', data)
+                axios.post('https://computer-club-team.herokuapp.com/add-event', data)
                     .then(result => {
                         if (result?.data?.insertedId) {
                             Swal.fire(`${data.eventType} Event! added`, '', 'success')

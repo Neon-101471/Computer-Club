@@ -29,7 +29,7 @@ const Executive = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/executives/${id}`)
+                axios.delete(`https://computer-club-team.herokuapp.com/executives/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`executive! Deleted`, '', 'success')
