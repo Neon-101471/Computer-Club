@@ -14,9 +14,9 @@ const Students = () => {
                 setUiData(data)
             });
     }, [])
-    var uniqueBatch = [];
+    let uniqueBatch = [];
     students.filter(function (item) {
-        var i = uniqueBatch.findIndex(x => x.batch === item.batch);
+        let i = uniqueBatch.findIndex(x => x.batch === item.batch);
         if (i <= -1) {
             uniqueBatch.push(item);
         }
