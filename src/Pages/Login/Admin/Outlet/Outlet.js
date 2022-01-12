@@ -4,6 +4,7 @@ import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddNotice from './AddNotice/AddNotice';
 import AddProgrammingContest from './AddProgrammingContest/AddProgrammingContest';
+import AllEvents from './AddProgrammingContest/AllEvents';
 import AllNotice from './AllNotice/AllNotice';
 import AddStudent from './Department/AddStudent';
 import AddTeacher from './Department/AddTeacher';
@@ -23,10 +24,10 @@ const Outlet = () => {
                 <Route exact path={path}>
                     <h2 className='fw-bolder my-5 py-5 text-center'>Start to operation your profile</h2>
                 </Route>
-                <AdminRoute path={`${path}/all-programming-contest`}>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequatur explicabo repellendus libero similique alias perspiciatis sapiente impedit. Magni minus, eaque similique in officiis debitis rem. Temporibus molestiae illum maiores.</h2>
+                <AdminRoute path={`${path}/all-events`}>
+                    <AllEvents />
                 </AdminRoute>
-                <AdminRoute path={`${path}/add-programming-contest`}>
+                <AdminRoute path={`${path}/add-event`}>
                     <AddProgrammingContest />
                 </AdminRoute>
                 <AdminRoute path={`${path}/users`}>

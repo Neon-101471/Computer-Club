@@ -28,7 +28,7 @@ const Users = () => {
                             <td>{user?.displayName}</td>
                             <td>{user?.email}</td>
                             <td>{user.role ? user.role : 'General'}</td>
-                            <td className='d-flex justify-content-center'>
+                            <td className='d-flex justify-content-evenly'>
                                 <Button variant='warning'>Make Admin</Button>
                             </td>
                         </tr>

@@ -3,11 +3,19 @@ import { Button, Table } from 'react-bootstrap';
 
 const Teachers = () => {
     const [teachers, setTeachers] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
+        setLoading(true);
         fetch('https://computer-club-team.herokuapp.com/teachers')
             .then(res => res.json())
             .then(data => setTeachers(data))
+        setLoading(false);
     }, [])
+    if (loading) {
+        return <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </div>
+    }
     return (
         <div className='py-5'>
             <h2 className='fw-bolder text-center pb-3'>All Teachers</h2>
@@ -28,7 +36,7 @@ const Teachers = () => {
                             <td>{teacher?.name}</td>
                             <td>{teacher?.designation}</td>
                             <td><a href={`${teacher?.email}`}>{teacher?.email}</a></td>
-                            <td>
+                            <td className='d-flex justify-content-evenly'>
                                 <Button variant='warning'>Edit</Button>
                                 <Button variant='danger'>Delete</Button>
                             </td>

@@ -30,7 +30,7 @@ const Executive = () => {
                             <td>{executive?.designation}</td>
                             <td>{executive?.panel}</td>
                             <td><a href={`${executive?.email}`}>{executive?.email}</a></td>
-                            <td className='d-flex justify-content-between'>
+                            <td className='d-flex justify-content-evenly'>
                                 <Button variant='warning'>Edit</Button>
                                 <Button variant='danger'>Delete</Button>
                             </td>

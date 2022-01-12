@@ -15,20 +15,8 @@ const AdminSideNav = () => {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header className='bg-navy'>Events</Accordion.Header>
                         <Accordion.Body className='bg-navy'>
-                            <Link className='bg-navy d-block' to={`${url}/all-programming-contest`}>All Programming Contest</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-programming-contest`}>Add Programming Contest</Link>
-
-                            <Link className='bg-navy d-block' to={`${url}/all-workShop`}>WorkShop</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-workShop`}>Add WorkShop</Link>
-
-                            <Link className='bg-navy d-block' to={`${url}/all-webinars`}>All Webinars</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-webinars`}>Add Webinars</Link>
-
-                            <Link className='bg-navy d-block' to={`${url}/all-seminar`}>All Seminar</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-seminar`}>Add seminar</Link>
-
-                            <Link className='bg-navy d-block' to={`${url}/all-boot-camp-link`}>All Boot camp Link</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-boot-camp-link`}>Add Boot camp Link</Link>
+                            <Link className='bg-navy d-block' to={`${url}/all-events`}>All Events</Link>
+                            <Link className='bg-navy d-block' to={`${url}/add-event`}>Add Event</Link>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
