@@ -23,7 +23,7 @@ const AdminSideNav = () => {
                         <Accordion.Header className='bg-navy'>Notice</Accordion.Header>
                         <Accordion.Body className='bg-navy'>
                             <Link className='bg-navy d-block' to={`${url}/all-notice`}>All Notice</Link>
-                            <Link className='bg-navy d-block' to={`${url}/add-notice`}>Add new Notice</Link>
+                            <Link className='bg-navy d-block' to={`${url}/add-notice`}>Add Notice</Link>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">

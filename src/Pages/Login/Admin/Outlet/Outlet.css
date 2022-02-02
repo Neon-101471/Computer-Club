@@ -1,0 +1,18 @@
+.outlet-container{
+    /* background-image: url('https://i.ibb.co/f9fjdtc/office-responsive-devices-creativity-tutorials-3d-rendering.jpg'); */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+}
+
+.dashboard-heading{
+    font-size: 60px;
+    color: #35587a;
+    background-color: azure;
+}
+
+.dashboard-heading:hover{
+    color: #d87d7d;
+}

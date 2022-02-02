@@ -1,4 +1,5 @@
 import React from 'react';
+import './Outlet.css';
 import { Route, Switch } from 'react-router-dom';
 import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import AdminRoute from '../../AdminRoute/AdminRoute';
@@ -19,10 +20,10 @@ import Users from './Users/Users';
 const Outlet = () => {
     let { path } = useRouteMatch();
     return (
-        <div className=''>
+        <div className='outlet-container'>
             <Switch>
-                <Route exact path={path}>
-                    <h2 className='fw-bolder my-5 py-5 text-center'>Start to operation your profile</h2>
+                <Route exact path={path} className=''>
+                    <h1 className='fw-bolder py-5 mt-5 text-center dashboard-heading'>Start to update your profile</h1>
                 </Route>
                 <AdminRoute path={`${path}/all-events`}>
                     <AllEvents />

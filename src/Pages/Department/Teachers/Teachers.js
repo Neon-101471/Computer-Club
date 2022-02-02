@@ -96,6 +96,7 @@ const Teachers = () => {
             .then(res => res.json())
             .then(data => setTeachers(data))
     }, [])
+    console.log(teachers);
     return (
         <div className='teachers-container pb-5'>
             <Banner title={'Teachers, CSE Department'}></Banner>
@@ -105,7 +106,7 @@ const Teachers = () => {
                         teachers.map(teacher => <div className="col" key={teacher._id}>
                             <div className="card single-teacher">
                                 <div className="teacher-image d-flex justify-content-center align-items-center">
-                                    <img src={teacher.image} className="card-img-top" alt="..." />
+                                    <img src={teacher.photoURL} className="card-img-top" alt="..." />
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{teacher.name}</h5>

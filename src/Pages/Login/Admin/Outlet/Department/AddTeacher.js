@@ -37,18 +37,18 @@ const AddTeacher = () => {
 
             <div className="col-md-7">
                 <div className="event-form p-0 text-start">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)} style={{height: '500px'}}>
                         <p className='justify-content-start'>Name</p>
                         <input type="text" {...register("name", { required: true })} placeholder="Teacher Name" />
 
                         <p className='d-flex justify-content-start'>Designation</p>
-                        <input type="text" {...register("designation", { required: true })} placeholder='Department Chairman, Department of CSE' />
+                        <input type="text" {...register("designation", { required: true })} placeholder='Teachers Designation' />
 
                         <p className='d-flex justify-content-start'>Email</p>
                         <input type="email" {...register("email", { required: true })} placeholder="Email" />
 
                         <p className='d-flex justify-content-start'>Photo</p>
-                        <input type="text" {...register("photoURL", { required: true })} placeholder="Photo link" />
+                        <input type="text" {...register("photoURL", { required: true })} placeholder="Image link" />
 
                         <p className='d-flex justify-content-start'>Join Date</p>
                         <input type="date" {...register("joinDate", { required: true })} placeholder="2020-2021" />

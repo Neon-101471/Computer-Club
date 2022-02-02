@@ -11,7 +11,7 @@ const Dashboard = () => {
                 <Col xs={12} md={2} style={{ backgroundColor: 'rgb(12, 35, 64)' }}>
                     <AdminSideNav />
                 </Col>
-                <Col xs={12} md={10}>
+                <Col xs={12} md={10} style={{padding: '0px'}}>
                     <Outlet />
                 </Col>
             </Row>
