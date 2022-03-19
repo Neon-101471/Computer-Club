@@ -99,7 +99,7 @@ const useFirebase = () => {
     }, []);
 
     useEffect(() => {
-        fetch(`https://computer-club-team.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data?.role === 'admin') {
@@ -125,7 +125,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
 
-        fetch('https://computer-club-team.herokuapp.com/user', {
+        fetch('http://localhost:5000/user', {
             method: method,
             headers: {
                 'content-type': 'application/json'

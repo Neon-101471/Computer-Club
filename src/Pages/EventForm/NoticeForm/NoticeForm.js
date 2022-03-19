@@ -11,7 +11,7 @@ const EventForm = () => {
         const month = date.split('-');
         const chrMonth = months[month[1] - 1];
         data.chrMonth = chrMonth;
-        axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
+        axios.post('http://localhost:5000/add-notice', data)
             .then(response => {
                 if (response.data.insertedId) {
                     alert('Notice successfully added.');

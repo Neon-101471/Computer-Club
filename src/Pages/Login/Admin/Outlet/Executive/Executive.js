@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const Executive = () => {
     const [executives, setExecutives] = useState([]);
     useEffect(() => {
-        fetch('https://computer-club-team.herokuapp.com/executives')
+        fetch('http://localhost:5000/executives')
             .then(res => res.json())
             .then(data => setExecutives(data))
     }, [])
@@ -29,7 +29,7 @@ const Executive = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`https://computer-club-team.herokuapp.com/executives/${id}`)
+                axios.delete(`http://localhost:5000/executives/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`executive! Deleted`, '', 'success')

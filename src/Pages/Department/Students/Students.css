@@ -1,6 +1,6 @@
 .single-student {
     background: #005AA7;
-    background: linear-gradient(to right, white, lightskyblue);
+    background: linear-gradient(to right, white, rgb(177, 213, 236));
 }
 
 .students-container {

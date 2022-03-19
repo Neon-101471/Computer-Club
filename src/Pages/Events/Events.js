@@ -11,9 +11,9 @@ import BootCamp from './BootCamp/BootCamp';
 const sideNav = [
     { id: 1, title: 'Programming Contest', tab: 'programming-contest' },
     { id: 2, title: 'WorkShop', tab: 'workshop' },
-    { id: 3, title: 'Webinars', tab: 'webinars' },
+    { id: 3, title: 'Webinar', tab: 'webinars' },
     { id: 4, title: 'Seminar', tab: 'seminar' },
-    { id: 5, title: 'Boot Camp', tab: 'boot-camp' },
+    { id: 5, title: 'Bootcamp', tab: 'boot-camp' },
 ]
 
 const Events = () => {

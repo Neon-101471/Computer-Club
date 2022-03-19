@@ -16,7 +16,7 @@ const AddTeacher = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('https://computer-club-team.herokuapp.com/add-teacher', data)
+                axios.post('http://localhost:5000/add-teacher', data)
                     .then(result => {
                         console.log(result);
                         if (result?.data?.insertedId) {
@@ -37,7 +37,7 @@ const AddTeacher = () => {
 
             <div className="col-md-7">
                 <div className="event-form p-0 text-start">
-                    <form onSubmit={handleSubmit(onSubmit)} style={{height: '500px'}}>
+                    <form onSubmit={handleSubmit(onSubmit)} style={{ height: '500px' }}>
                         <p className='justify-content-start'>Name</p>
                         <input type="text" {...register("name", { required: true })} placeholder="Teacher Name" />
 

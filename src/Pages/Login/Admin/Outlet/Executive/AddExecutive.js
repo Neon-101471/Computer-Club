@@ -16,7 +16,7 @@ const AddExecutive = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('https://computer-club-team.herokuapp.com/add-executive', data)
+                axios.post('http://localhost:5000/add-executive', data)
                     .then(result => {
                         console.log(result);
                         if (result?.data?.insertedId) {
@@ -37,7 +37,7 @@ const AddExecutive = () => {
 
             <div className="col-md-7">
                 <div className="event-form p-0 text-start">
-                    <form onSubmit={handleSubmit(onSubmit)} style={{height: '600px'}}>
+                    <form onSubmit={handleSubmit(onSubmit)} style={{ height: '600px' }}>
                         <p className='justify-content-start'>Name</p>
                         <input type="text" {...register("name", { required: true })} placeholder="Executive Name" />
 

@@ -7,7 +7,7 @@ const Students = () => {
     const [students, setStudents] = useState([])
     const [uiData, setUiData] = useState([]);
     useEffect(() => {
-        fetch('https://computer-club-team.herokuapp.com/students')
+        fetch('http://localhost:5000/students')
             .then(res => res.json())
             .then(data => {
                 setStudents(data)
@@ -42,8 +42,8 @@ const Students = () => {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title">{student.name}</h5>
-                                            <p>{student.batch} Batch</p>
-                                            <p>{student.session} Session</p>
+                                            <p>Batch: {student.batch}</p>
+                                            <p>Session: {student.session}</p>
                                             <p className="card-text">Email: {student.email}</p>
                                         </div>
                                     </div>

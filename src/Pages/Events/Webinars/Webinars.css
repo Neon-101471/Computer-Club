@@ -1,0 +1,14 @@
+.webinar_container{
+    background-image: url('../../../Images/Events/programming-contest_01.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.webinar-heading:hover{
+    color: aqua;
+}

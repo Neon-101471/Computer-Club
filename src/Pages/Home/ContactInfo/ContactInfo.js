@@ -17,8 +17,8 @@ const ContactInfo = () => {
                         <h4 className='pt-3'>Location</h4>
                         <p>Rangamati Science & Technology University (RMSTU), <br /> Jhagra Bil, Rangamati-4500</p>
                         <h4 className='pt-3'>Contact</h4>
-                        <p className='m-0'>Email: <a href="mailto:xyz@gmail.com">rmstu.club@gmail.com</a></p>
-                        <p className='m-0'>Phone: <a href="tel: +8801926294263">+8801926294263</a></p>
+                        <p className='m-0'>Email: <a href="rmstu.club@gmail.com">rmstu.club@gmail.com</a></p>
+                        <p className='m-0'>Phone: <a href="tel: +8801555882244">+8801555882244</a></p>
                     </address>
                 </Col>
             </Row>

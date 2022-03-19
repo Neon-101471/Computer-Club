@@ -23,7 +23,7 @@ const AddNotice = () => {
                 data.chrMonth = chrMonth;
                 data.day = day;
                 //pass data in backend
-                axios.post('https://computer-club-team.herokuapp.com/add-notice', data)
+                axios.post('http://localhost:5000/add-notice', data)
                     .then(response => {
                         if (response.data.insertedId) {
                             Swal.fire('Added notice', '', 'success')

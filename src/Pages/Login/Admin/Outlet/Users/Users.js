@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 const Users = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://computer-club-team.herokuapp.com/users')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])

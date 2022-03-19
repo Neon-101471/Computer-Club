@@ -15,7 +15,7 @@ const Welcome = () => {
               width="100%"
               height="310px"
               controls
-              url="https://youtu.be/7N2jks0AQb4"
+              url="https://youtu.be/K4TOrB7at0Y"
             ></ReactPlayer>
           </div>
           <div className="col-md-7  mt-3 d-flex justify-content-center align-items-center">
