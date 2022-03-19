@@ -9,7 +9,7 @@ const NoticeBody = () => {
     let { path, url } = useRouteMatch();
     const [notices, setNotices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/all-notice')
+        fetch('https://fast-fortress-28219.herokuapp.com/all-notice')
             .then(res => res.json())
             .then(data => setNotices(data))
     }, [])

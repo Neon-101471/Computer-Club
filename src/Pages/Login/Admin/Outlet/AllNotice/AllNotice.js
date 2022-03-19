@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const AllNotice = () => {
     const [notices, setNotices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/all-notice')
+        fetch('https://fast-fortress-28219.herokuapp.com/all-notice')
             .then(res => res.json())
             .then(data => setNotices(data))
     }, [])
@@ -30,7 +30,7 @@ const AllNotice = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/notices/${id}`)
+                axios.delete(`https://fast-fortress-28219.herokuapp.com/notices/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`Notice! Deleted`, '', 'success')

@@ -18,7 +18,7 @@ const MakeAdmin = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass data in backend
-                axios.post('http://localhost:5000/users/make-admin', data)
+                axios.post('https://fast-fortress-28219.herokuapp.com/users/make-admin', data)
                     .then(result => {
                         console.log(result);
                         if (result?.data?.modifiedCount > 0) {

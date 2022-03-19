@@ -8,7 +8,7 @@ const Teachers = () => {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/teachers')
+        fetch('https://fast-fortress-28219.herokuapp.com/teachers')
             .then(res => res.json())
             .then(data => setTeachers(data))
         setLoading(false);
@@ -37,7 +37,7 @@ const Teachers = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/teachers/${id}`)
+                axios.delete(`https://fast-fortress-28219.herokuapp.com/teachers/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`teacher! Deleted`, '', 'success')

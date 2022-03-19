@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const Students = () => {
     const [students, setStudents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/students')
+        fetch('https://fast-fortress-28219.herokuapp.com/students')
             .then(res => res.json())
             .then(data => setStudents(data))
     }, [])
@@ -30,7 +30,7 @@ const Students = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 //pass req in backend for delete
-                axios.delete(`http://localhost:5000/students/${id}`)
+                axios.delete(`https://fast-fortress-28219.herokuapp.com/students/${id}`)
                     .then(result => {
                         if (result?.data?.deletedCount > 0) {
                             Swal.fire(`Student! Deleted`, '', 'success')

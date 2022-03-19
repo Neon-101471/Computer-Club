@@ -7,7 +7,7 @@ const Students = () => {
     const [students, setStudents] = useState([])
     const [uiData, setUiData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/students')
+        fetch('https://fast-fortress-28219.herokuapp.com/students')
             .then(res => res.json())
             .then(data => {
                 setStudents(data)
@@ -35,19 +35,20 @@ const Students = () => {
                     <Col xs={12} md={10}>
                         <div className="row row-cols-1 row-cols-md-3 g-3 pt-2">
                             {
-                                uiData.map(student => <div className="col" key={student._id}>
-                                    <div className="card single-student">
-                                        <div className='d-flex justify-content-center py-3'>
-                                            <img src={student.photoURL} style={{ width: '80px', height: '80px', borderRadius: '50%' }} alt="" />
+                                uiData.map(student =>
+                                    <div className="col" key={student._id}>
+                                        <div className="card single-student">
+                                            <div className='d-flex justify-content-center py-3'>
+                                                <img src={student.photoURL} style={{ width: '80px', height: '80px', borderRadius: '50%' }} alt="" />
+                                            </div>
+                                            <div className="card-body">
+                                                <h5 className="card-title">{student.name}</h5>
+                                                <p>Batch: {student.batch}</p>
+                                                <p>Session: {student.session}</p>
+                                                <p className="card-text">Email: {student.email}</p>
+                                            </div>
                                         </div>
-                                        <div className="card-body">
-                                            <h5 className="card-title">{student.name}</h5>
-                                            <p>Batch: {student.batch}</p>
-                                            <p>Session: {student.session}</p>
-                                            <p className="card-text">Email: {student.email}</p>
-                                        </div>
-                                    </div>
-                                </div>)
+                                    </div>)
                             }
                         </div>
                     </Col>
